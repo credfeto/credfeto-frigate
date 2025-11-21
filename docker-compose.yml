@@ -14,3 +14,11 @@ services:
     ports:
       - "8971:8971"
       - "8554:8554" # RTSP feeds
+
+volumes:
+  frigate_config:
+    name: frigate_config
+    external: true
+  frigate_storage:
+    name: frigate_storage
+    external: true    

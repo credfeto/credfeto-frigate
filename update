@@ -1,5 +1,7 @@
 #! /bin/sh
 
+BASEDIR="$(dirname "$(readlink -f "$0")")"
+
 
 echo "Create Volumes"
 mkdir -p /data/frigate/config
@@ -18,7 +20,7 @@ docker volume create \
   frigate_storage
 
 
-cp /data/frigate/config
+[-f "$BASEDIR/config.yml" ] && cp "$BASEDIR/config.yml" /data/frigate/config/config.yml
 
 docker compose up -d --remove-orphans
 

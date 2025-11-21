@@ -5,7 +5,7 @@ BASEDIR="$(dirname "$(readlink -f "$0")")"
 
 echo "Create Volumes"
 mkdir -p /data/frigate/config
-mkdir -p /data/frigate/storate
+mkdir -p /data/frigate/storage
 
 docker volume create \
   --opt type=none \

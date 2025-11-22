@@ -15,7 +15,7 @@ cameras:
       user: viewer
       password: Viewer1234
     detect:
-      enabled: false
+      enabled: true
       width: 2560
       height: 1440
 
@@ -32,7 +32,7 @@ cameras:
       user: viewer
       password: Viewer1234
     detect:
-      enabled: false
+      enabled: true
       width: 2560
       height: 1440
 
@@ -49,7 +49,7 @@ cameras:
       user: viewer
       password: Viewer1234
     detect:
-      enabled: false
+      enabled: true
       width: 2560
       height: 1440
 
@@ -66,10 +66,21 @@ cameras:
       user: viewer
       password: Viewer1234
     detect:
-      enabled: false
+      enabled: true
       width: 2560
       height: 1440
 
 detect:
   enabled: true
 version: 0.16-0
+semantic_search:
+  enabled: true
+  model_size: small
+face_recognition:
+  enabled: true
+  model_size: small
+lpr:
+  enabled: true
+classification:
+  bird:
+    enabled: true

@@ -1,0 +1,75 @@
+mqtt:
+  enabled: false
+
+cameras:
+  spro_cam_01:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.86.30
+          roles:
+            - detect
+    onvif:
+      host: 192.168.86.30
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: false
+      width: 2560
+      height: 1440
+
+  spro_cam_02:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.86.31
+          roles:
+            - detect
+    onvif:
+      host: 192.168.86.31
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: false
+      width: 2560
+      height: 1440
+
+  spro_cam_03:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.86.32
+          roles:
+            - detect
+    onvif:
+      host: 192.168.86.32
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: false
+      width: 2560
+      height: 1440
+
+  spro_cam_04:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.86.33
+          roles:
+            - detect
+    onvif:
+      host: 192.168.86.33
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: false
+      width: 2560
+      height: 1440
+
+detect:
+  enabled: true
+version: 0.16-0

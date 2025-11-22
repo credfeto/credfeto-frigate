@@ -8,7 +8,9 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.30
           roles:
+            - audio
             - detect
+            - record
     onvif:
       host: 192.168.86.30
       port: 8000
@@ -25,7 +27,9 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.31
           roles:
+            - audio
             - detect
+            - record
     onvif:
       host: 192.168.86.31
       port: 8000
@@ -42,7 +46,9 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.32
           roles:
+            - audio
             - detect
+            - record
     onvif:
       host: 192.168.86.32
       port: 8000
@@ -59,12 +65,24 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.33
           roles:
+            - audio
             - detect
+            - record
     onvif:
       host: 192.168.86.33
       port: 8000
       user: viewer
       password: Viewer1234
+      autotracking:
+        # Optional: enable/disable object autotracking. (default: shown below)
+        enabled: False
+        track:
+          - bicycle
+          - car
+          - cat
+          - dog
+          - motorcycle
+          - person
     detect:
       enabled: true
       width: 2560
@@ -88,7 +106,11 @@ classification:
 objects:
   # Optional: list of objects to track from labelmap.txt (default: shown below)
   track:
+    - bicycle
     - car
+    - cat
+    - dog
+    - motorcycle
     - person
 
 review:
@@ -98,7 +120,11 @@ review:
     enabled: True
     # Optional: labels that qualify as an alert (default: shown below)
     labels:
+      - bicycle
       - car
+      - cat
+      - dog
+      - motorcycle
       - person
 
 motion:
@@ -123,6 +149,27 @@ alerts:
     #       For example, if the camera retain mode is "motion", the segments without motion are
     #       never stored, so setting the mode to "all" here won't bring them back.
     mode: motion
+
+  # Optional: detection recording settings
+  detections:
+    # Optional: Number of seconds before the detection to include (default: shown below)
+    pre_capture: 5
+    # Optional: Number of seconds after the detection to include (default: shown below)
+    post_capture: 5
+    # Optional: Retention settings for recordings of detections
+    retain:
+      # Required: Retention days (default: shown below)
+      days: 14
+      # Optional: Mode for retention. (default: shown below)
+      #   all - save all recording segments for detections regardless of activity
+      #   motion - save all recordings segments for detections with any detected motion
+      #   active_objects - save all recording segments for detections with active/moving objects
+      #
+      # NOTE: If the retain mode for the camera is more restrictive than the mode configured
+      #       here, the segments will already be gone by the time this mode is applied.
+      #       For example, if the camera retain mode is "motion", the segments without motion are
+      #       never stored, so setting the mode to "all" here won't bring them back.
+      mode: active_objects
 
 # Optional: Record configuration
 # NOTE: Can be overridden at the camera level
@@ -158,3 +205,67 @@ export:
   # The -r (framerate) dictates how smooth the output video is.
   # So the args would be -vf setpts=0.02*PTS -r 30 in that case.
   timelapse_args: "-vf setpts=0.04*PTS -r 30"
+
+# Optional: Configuration for semantic search capability
+semantic_search:
+  # Optional: Enable semantic search (default: shown below)
+  enabled: True
+  # Optional: Re-index embeddings database from historical tracked objects (default: shown below)
+  reindex: True
+  # Optional: Set the model used for embeddings. (default: shown below)
+  model: "jinav1"
+  # Optional: Set the model size used for embeddings. (default: shown below)
+  # NOTE: small model runs on CPU and large model runs on GPU
+  model_size: "small"
+
+# Optional: Configuration for face recognition capability
+# NOTE: enabled, min_area can be overridden at the camera level
+face_recognition:
+  # Optional: Enable face recognition (default: shown below)
+  enabled: True
+  # Optional: Minimum face distance score required to mark as a potential match (default: shown below)
+  unknown_score: 0.8
+  # Optional: Minimum face detection score required to detect a face (default: shown below)
+  # NOTE: This only applies when not running a Frigate+ model
+  detection_threshold: 0.7
+  # Optional: Minimum face distance score required to be considered a match (default: shown below)
+  recognition_threshold: 0.9
+  # Optional: Min area of detected face box to consider running face recognition (default: shown below)
+  min_area: 500
+  # Optional: Min face recognitions for the sub label to be applied to the person object (default: shown below)
+  min_faces: 1
+  # Optional: Number of images of recognized faces to save for training (default: shown below)
+  save_attempts: 100
+  # Optional: Apply a blur quality filter to adjust confidence based on the blur level of the image (default: shown below)
+  blur_confidence_filter: True
+  # Optional: Set the model size used face recognition. (default: shown below)
+  model_size: small
+
+# Optional: Configuration for license plate recognition capability
+# NOTE: enabled, min_area, and enhancement can be overridden at the camera level
+lpr:
+  # Optional: Enable license plate recognition (default: shown below)
+  enabled: True
+  # Optional: The device to run the models on (default: shown below)
+  device: CPU
+  # Optional: Set the model size used for text detection. (default: shown below)
+  model_size: small
+  # Optional: License plate object confidence score required to begin running recognition (default: shown below)
+  detection_threshold: 0.7
+  # Optional: Minimum area of license plate to begin running recognition (default: shown below)
+  min_area: 1000
+  # Optional: Recognition confidence score required to add the plate to the object as a sub label (default: shown below)
+  recognition_threshold: 0.9
+  # Optional: Minimum number of characters a license plate must have to be added to the object as a sub label (default: shown below)
+  min_plate_length: 4
+  # Optional: Regular expression for the expected format of a license plate (default: shown below)
+  format: None
+  # Optional: Allow this number of missing/incorrect characters to still cause a detected plate to match a known plate
+  match_distance: 1
+  # Optional: Known plates to track (strings or regular expressions) (default: shown below)
+  known_plates: {}
+  # Optional: Enhance the detected plate image with contrast adjustment and denoising (default: shown below)
+  # A value between 0 and 10. Higher values are not always better and may perform worse than lower values.
+  enhancement: 0
+  # Optional: Save plate images to /media/frigate/clips/lpr for debugging purposes (default: shown below)
+  debug_save_plates: False

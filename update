@@ -4,28 +4,26 @@ BASEDIR="$(dirname "$(readlink -f "$0")")"
 
 
 echo "Create Volumes"
-mkdir -p /data/frigate/config
-mkdir -p /data/frigate/storage
+sudo mkdir -p /data/frigate/config
+sudo mkdir -p /data/frigate/storage
 
-docker volume create \
+sudo docker volume create \
   --opt type=none \
   --opt o=bind \
   --opt device=/data/frigate/config \
   frigate_config
 
-docker volume create \
+sudo docker volume create \
   --opt type=none \
   --opt o=bind \
   --opt device=/data/frigate/storage \
   frigate_storage
 
 
-[ -f "$BASEDIR/config.yml" ] && cp "$BASEDIR/config.yml" /data/frigate/config/config.yml
-
-docker compose up -d --remove-orphans
-
+[ -f "$BASEDIR/config.yml" ] && sudo cp "$BASEDIR/config.yml" /data/frigate/config/config.yml
 
 sudo docker compose up -d --remove-orphans
+
 
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.0.0.0/8" port protocol="tcp" port="8971" accept'
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.0.0/16" port protocol="tcp" port="8971" accept'
@@ -36,4 +34,4 @@ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="192.168.0.0/16" port protocol="tcp" port="8554" accept'
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.0.0/20" port protocol="tcp" port="8554" accept'
 
-firewall-cmd --reload
+sudo firewall-cmd --reload

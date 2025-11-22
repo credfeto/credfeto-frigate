@@ -1,5 +1,5 @@
 mqtt:
-  enabled: false
+  enabled: true
 
 cameras:
   spro_cam_01:

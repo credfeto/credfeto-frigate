@@ -16,16 +16,16 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-      autotracking:
-        # Optional: enable/disable object autotracking. (default: shown below)
-        enabled: True
-        track:
-          - bicycle
-          - car
-          - cat
-          - dog
-          - motorcycle
-          - person
+#      autotracking:
+#        # Optional: enable/disable object autotracking. (default: shown below)
+#        enabled: True
+#        track:
+#          - bicycle
+#          - car
+#          - cat
+#          - dog
+#          - motorcycle
+#          - person
     detect:
       enabled: true
       width: 2560
@@ -45,16 +45,16 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-      autotracking:
-        # Optional: enable/disable object autotracking. (default: shown below)
-        enabled: True
-        track:
-          - bicycle
-          - car
-          - cat
-          - dog
-          - motorcycle
-          - person
+#      autotracking:
+#        # Optional: enable/disable object autotracking. (default: shown below)
+#        enabled: True
+#        track:
+#          - bicycle
+#          - car
+#          - cat
+#          - dog
+#          - motorcycle
+#          - person
     detect:
       enabled: true
       width: 2560
@@ -74,16 +74,16 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-      autotracking:
-        # Optional: enable/disable object autotracking. (default: shown below)
-        enabled: True
-        track:
-          - bicycle
-          - car
-          - cat
-          - dog
-          - motorcycle
-          - person
+#      autotracking:
+#        # Optional: enable/disable object autotracking. (default: shown below)
+#        enabled: True
+#        track:
+#          - bicycle
+#          - car
+#          - cat
+#          - dog
+#          - motorcycle
+#          - person
     detect:
       enabled: true
       width: 2560
@@ -103,16 +103,16 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-      autotracking:
-        # Optional: enable/disable object autotracking. (default: shown below)
-        enabled: True
-        track:
-          - bicycle
-          - car
-          - cat
-          - dog
-          - motorcycle
-          - person
+#      autotracking:
+#        # Optional: enable/disable object autotracking. (default: shown below)
+#        enabled: True
+#        track:
+#          - bicycle
+#          - car
+#          - cat
+#          - dog
+#          - motorcycle
+#          - person
     detect:
       enabled: true
       width: 2560

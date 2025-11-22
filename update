@@ -20,7 +20,7 @@ docker volume create \
   frigate_storage
 
 
-[-f "$BASEDIR/config.yml" ] && cp "$BASEDIR/config.yml" /data/frigate/config/config.yml
+[ -f "$BASEDIR/config.yml" ] && cp "$BASEDIR/config.yml" /data/frigate/config/config.yml
 
 docker compose up -d --remove-orphans
 

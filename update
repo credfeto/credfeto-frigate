@@ -2,6 +2,7 @@
 
 BASEDIR="$(dirname "$(readlink -f "$0")")"
 
+git pull
 
 echo "Create Volumes"
 sudo mkdir -p /data/frigate/config
@@ -22,7 +23,7 @@ sudo docker volume create \
 
 [ -f "$BASEDIR/config.yml" ] && sudo cp "$BASEDIR/config.yml" /data/frigate/config/config.yml
 
-sudo docker compose up -d --remove-orphans
+sudo docker compose down && sudo docker compose up -d --remove-orphans
 
 
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.0.0.0/8" port protocol="tcp" port="8971" accept'

@@ -16,16 +16,6 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-#      autotracking:
-#        # Optional: enable/disable object autotracking. (default: shown below)
-#        enabled: True
-#        track:
-#          - bicycle
-#          - car
-#          - cat
-#          - dog
-#          - motorcycle
-#          - person
     detect:
       enabled: true
       width: 2560
@@ -45,16 +35,6 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-#      autotracking:
-#        # Optional: enable/disable object autotracking. (default: shown below)
-#        enabled: True
-#        track:
-#          - bicycle
-#          - car
-#          - cat
-#          - dog
-#          - motorcycle
-#          - person
     detect:
       enabled: true
       width: 2560
@@ -74,16 +54,6 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-#      autotracking:
-#        # Optional: enable/disable object autotracking. (default: shown below)
-#        enabled: True
-#        track:
-#          - bicycle
-#          - car
-#          - cat
-#          - dog
-#          - motorcycle
-#          - person
     detect:
       enabled: true
       width: 2560
@@ -103,16 +73,6 @@ cameras:
       port: 8000
       user: viewer
       password: Viewer1234
-#      autotracking:
-#        # Optional: enable/disable object autotracking. (default: shown below)
-#        enabled: True
-#        track:
-#          - bicycle
-#          - car
-#          - cat
-#          - dog
-#          - motorcycle
-#          - person
     detect:
       enabled: true
       width: 2560
@@ -120,18 +80,14 @@ cameras:
 
 detect:
   enabled: true
-version: 0.16-0
-#semantic_search:
-#  enabled: true
-#  model_size: small
-#face_recognition:
-#  enabled: true
-#  model_size: small
-#lpr:
-#  enabled: true
+
 classification:
   bird:
     enabled: true
+
+birdseye:
+  enabled: true
+  restream: true
 
 objects:
   # Optional: list of objects to track from labelmap.txt (default: shown below)
@@ -159,26 +115,6 @@ review:
 
 motion:
   enabled: true
-
-#alerts:
-#  # Optional: Number of seconds before the alert to include (default: shown below)
-#  pre_capture: 5
-#  # Optional: Number of seconds after the alert to include (default: shown below)
-#  post_capture: 5
-#  # Optional: Retention settings for recordings of alerts
-#  retain:
-#    # Required: Retention days (default: shown below)
-#    days: 14
-#    # Optional: Mode for retention. (default: shown below)
-#    #   all - save all recording segments for alerts regardless of activity
-#    #   motion - save all recordings segments for alerts with any detected motion
-#    #   active_objects - save all recording segments for alerts with active/moving objects
-#    #
-#    # NOTE: If the retain mode for the camera is more restrictive than the mode configured
-#    #       here, the segments will already be gone by the time this mode is applied.
-#    #       For example, if the camera retain mode is "motion", the segments without motion are
-#    #       never stored, so setting the mode to "all" here won't bring them back.
-#    mode: motion
 
 # Optional: Record configuration
 # NOTE: Can be overridden at the camera level
@@ -278,3 +214,6 @@ lpr:
   enhancement: 0
   # Optional: Save plate images to /media/frigate/clips/lpr for debugging purposes (default: shown below)
   debug_save_plates: False
+
+
+version: 0.16-0

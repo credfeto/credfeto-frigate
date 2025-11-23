@@ -240,16 +240,19 @@ detectors:
     device: GPU
 
 model:
-  width: 320
-  height: 320
+  width: 300
+  height: 300
   input_tensor: nhwc
   input_pixel_format: bgr
   path: /openvino-model/ssdlite_mobilenet_v2.xml
   labelmap_path: /openvino-model/coco_91cl_bkgr.txt
+
+#  width: 320
+#  height: 320
 #  input_pixel_format: rgb
 #  path: /edgetpu_model.tflite
 #  labelmap_path: /labelmap.txt
-  model_type: ssd
+#  model_type: ssd
 #  labelmap:
 #    2: vehicle
 #    # Optional: Map of object labels to their attribute labels (default: depends on model)

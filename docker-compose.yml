@@ -41,8 +41,11 @@ services:
     stop_grace_period: 30s
     image: ghcr.io/blakeblackshear/frigate:stable
     shm_size: "2gb"
+    privileged: true
     devices:
-      - "/dev/dri"
+      # - "/dev/dri"
+      - "/dev/dri/renderD128:/dev/dri/renderD128"
+      - "/dev/dri/card1:/dev/dri/card0"
     security_opt:
       - seccomp:unconfined
     cap_add:

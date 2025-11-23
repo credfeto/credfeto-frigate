@@ -10,7 +10,6 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.30
           roles:
-            - audio
             - detect
             - record
     onvif:
@@ -29,7 +28,6 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.31
           roles:
-            - audio
             - detect
             - record
     onvif:
@@ -48,7 +46,6 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.32
           roles:
-            - audio
             - detect
             - record
     onvif:
@@ -67,7 +64,6 @@ cameras:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.33
           roles:
-            - audio
             - detect
             - record
     onvif:

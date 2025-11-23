@@ -10,7 +10,8 @@ cameras:
       input_args:
         - -fflags
         - +genpts
-        - -reset_timestamps 1
+        - -reset_timestamps
+        - 1
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.30
           roles:
@@ -32,7 +33,8 @@ cameras:
       input_args:
         - -fflags
         - +genpts
-        - -reset_timestamps 1
+        - -reset_timestamps
+        - 1
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.31
           roles:
@@ -54,7 +56,8 @@ cameras:
       input_args:
         - -fflags
         - +genpts
-        - -reset_timestamps 1
+        - -reset_timestamps
+        - 1
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.32
           roles:
@@ -76,7 +79,8 @@ cameras:
       input_args:
         - -fflags
         - +genpts
-        - -reset_timestamps 1
+        - -reset_timestamps
+        - 1
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.86.33
           roles:

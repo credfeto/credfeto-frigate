@@ -4,6 +4,9 @@ BASEDIR="$(dirname "$(readlink -f "$0")")"
 
 git pull
 
+echo "Permissions"
+echo "kernel.perf_event_paranoid = 2" | sudo tee /etc/sysctl.d/00_perf_event_paranoid.conf
+
 echo "Create Volumes"
 sudo mkdir -p /data/frigate/config
 sudo mkdir -p /data/frigate/storage

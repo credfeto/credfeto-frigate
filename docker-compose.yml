@@ -37,7 +37,7 @@ services:
 
   frigate:
     container_name: frigate
-    restart: unless-stopped
+    restart: always
     stop_grace_period: 30s
     image: ghcr.io/blakeblackshear/frigate:stable
     shm_size: "2gb"
@@ -48,6 +48,7 @@ services:
       - seccomp:unconfined
     cap_add:
       - SYS_PTRACE
+      - CAP_PERFMON
     ipc: host
     group_add:
       - video

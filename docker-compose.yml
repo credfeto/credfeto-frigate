@@ -41,6 +41,8 @@ services:
     stop_grace_period: 30s
     image: ghcr.io/blakeblackshear/frigate:stable
     shm_size: "2gb"
+    devices:
+      - "/dev/dri"
     volumes:
       - frigate_config:/config
       - frigate_storage:/media/frigate

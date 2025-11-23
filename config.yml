@@ -240,8 +240,8 @@ detectors:
     device: GPU
 
 model:
-  width: 300
-  height: 300
+  width: 320
+  height: 320
   input_tensor: nhwc
   input_pixel_format: rgb
   path: /edgetpu_model.tflite

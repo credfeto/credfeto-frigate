@@ -238,11 +238,26 @@ detectors:
   ov:
     type: openvino
     device: GPU
-#
-#model:
-#  width: 300
-#  height: 300
-#  input_tensor: nhwc
-#  input_pixel_format: bgr
-#  path: /openvino-model/ssdlite_mobilenet_v2.xml
-#  labelmap_path: /openvino-model/coco_91cl_bkgr.txt
+
+model:
+  width: 300
+  height: 300
+  input_tensor: nhwc
+  input_pixel_format: rgb
+  path: /edgetpu_model.tflite
+  #path: /openvino-model/ssdlite_mobilenet_v2.xml
+  labelmap_path: /labelmap.txt
+  #labelmap_path: /openvino-model/coco_91cl_bkgr.txt
+  model_type: ssd
+  labelmap:
+    2: vehicle
+    # Optional: Map of object labels to their attribute labels (default: depends on model)
+    attributes_map:
+      person:
+        - amazon
+        - face
+      car:
+        - amazon
+        - fedex
+        - license_plate
+        - ups

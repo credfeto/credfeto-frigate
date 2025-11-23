@@ -17,7 +17,7 @@ cameras:
             - record
     onvif:
       host: 192.168.86.30
-      port: 8000
+      port: 37777
       user: viewer
       password: Viewer1234
     detect:
@@ -38,7 +38,7 @@ cameras:
             - record
     onvif:
       host: 192.168.86.31
-      port: 8000
+      port: 37777
       user: viewer
       password: Viewer1234
     detect:
@@ -59,7 +59,7 @@ cameras:
             - record
     onvif:
       host: 192.168.86.32
-      port: 8000
+      port: 37777
       user: viewer
       password: Viewer1234
     detect:
@@ -80,7 +80,7 @@ cameras:
             - record
     onvif:
       host: 192.168.86.33
-      port: 8000
+      port: 37777
       user: viewer
       password: Viewer1234
     detect:

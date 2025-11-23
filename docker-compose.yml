@@ -43,9 +43,7 @@ services:
     shm_size: "2gb"
     privileged: true
     devices:
-      # - "/dev/dri"
-      - "/dev/dri/renderD128:/dev/dri/renderD128"
-      - "/dev/dri/card1:/dev/dri/card0"
+      - "/dev/dri:/dev/dri"
     security_opt:
       - seccomp:unconfined
     cap_add:

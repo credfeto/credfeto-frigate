@@ -194,7 +194,7 @@ lpr:
   # Optional: Enable license plate recognition (default: shown below)
   enabled: True
 #  # Optional: The device to run the models on (default: shown below)
-#  device: CPU
+  device: GPU
 #  # Optional: Set the model size used for text detection. (default: shown below)
 #  model_size: small
 #  # Optional: License plate object confidence score required to begin running recognition (default: shown below)

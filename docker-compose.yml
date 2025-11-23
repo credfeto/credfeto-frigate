@@ -43,6 +43,13 @@ services:
     shm_size: "2gb"
     devices:
       - "/dev/dri"
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    ipc: host
+    group_add:
+      - video
     volumes:
       - frigate_config:/config
       - frigate_storage:/media/frigate

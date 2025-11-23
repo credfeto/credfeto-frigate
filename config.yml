@@ -11,6 +11,10 @@ cameras:
         - -fflags
         - +genpts
       inputs:
+        # Main Channel
+        # rtsp://viewer:Viewer1234@192.168.86.30/cam/realmonitor?channel=1&subtype=0
+        # Sub Channel
+        # rtsp://viewer:Viewer1234@192.168.86.30/cam/realmonitor?channel=1&subtype=1
         - path: rtsp://viewer:Viewer1234@192.168.86.30
           roles:
             - detect

@@ -11,6 +11,16 @@ audio:
   enabled: true
 
 cameras:
+  xmeye_front_left:
+    enabled: true
+    ffmpeg:
+      inputs:
+        -path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
+        roles:
+          - detect
+          - record
+    detect:
+      enabled: true
   spro_cam_01:
     enabled: true
     webui_url: "https://192.168.86.30"
@@ -36,8 +46,6 @@ cameras:
       password: Viewer1234
     detect:
       enabled: true
-      width: 2560
-      height: 1440
 
   spro_cam_02:
     enabled: true

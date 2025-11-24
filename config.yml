@@ -22,6 +22,28 @@ cameras:
     detect:
       enabled: true
 
+  xmeye_front_car:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true
+
+  xmeye_front_right:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=3&stream=0.sdp
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true
+
   spro_cam_01:
     enabled: true
     webui_url: "https://192.168.86.30"

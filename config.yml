@@ -14,6 +14,11 @@ auth:
 audio:
   enabled: False
 
+timestamp_style:
+  position: "tl"
+  format: "%Y-%m-%d %H:%M:%S"
+  effect: Shadow
+
 cameras:
   xmeye_front_left:
     enabled: true
@@ -23,6 +28,7 @@ cameras:
       objects:
         - person
         - car
+    type: "lpr"
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
@@ -42,6 +48,7 @@ cameras:
       objects:
         - person
         - car
+    type: "lpr"
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
@@ -60,6 +67,7 @@ cameras:
       use_snapshot: True
       objects:
         - person
+    type: "lpr"
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=3&stream=0.sdp
@@ -78,6 +86,7 @@ cameras:
       use_snapshot: True
       objects:
         - person
+    type: "generic"
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=4&stream=0.sdp
@@ -97,6 +106,7 @@ cameras:
       use_snapshot: True
       objects:
         - person
+    type: "generic"
     ffmpeg:
       input_args:
         - -fflags
@@ -128,6 +138,7 @@ cameras:
       use_snapshot: True
       objects:
         - person
+    type: "generic"
     ffmpeg:
       input_args:
         - -fflags
@@ -156,6 +167,7 @@ cameras:
       use_snapshot: True
       objects:
         - person
+    type: "generic"
     ffmpeg:
       input_args:
         - -fflags
@@ -179,6 +191,7 @@ cameras:
   spro_cam_04:
     enabled: true
     webui_url: "https://192.168.86.33"
+    type: "generic"
     genai:
       enabled: True
       use_snapshot: True

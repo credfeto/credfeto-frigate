@@ -21,6 +21,8 @@ cameras:
             - record
     detect:
       enabled: true
+      width: 1900
+      height: 1080
 
   xmeye_front_car:
     enabled: true
@@ -32,6 +34,8 @@ cameras:
             - record
     detect:
       enabled: true
+      width: 1900
+      height: 1080
 
   xmeye_front_right:
     enabled: true
@@ -43,6 +47,8 @@ cameras:
             - record
     detect:
       enabled: true
+      width: 1900
+      height: 1080
 
   xmeye_garden_left:
     enabled: true
@@ -54,6 +60,8 @@ cameras:
             - record
     detect:
       enabled: true
+      width: 1900
+      height: 1080
 
   spro_garden_right:
     enabled: true

@@ -29,6 +29,8 @@ cameras:
         - person
         - car
     type: "lpr"
+    lpr:
+      enabled: True
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
@@ -49,6 +51,8 @@ cameras:
         - person
         - car
     type: "lpr"
+    lpr:
+      enabled: True
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
@@ -68,6 +72,8 @@ cameras:
       objects:
         - person
     type: "lpr"
+    lpr:
+      enabled: True
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=3&stream=0.sdp
@@ -87,6 +93,8 @@ cameras:
       objects:
         - person
     type: "generic"
+    lpr:
+      enabled: False
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=4&stream=0.sdp
@@ -107,6 +115,8 @@ cameras:
       objects:
         - person
     type: "generic"
+    lpr:
+      enabled: False
     ffmpeg:
       input_args:
         - -fflags
@@ -139,6 +149,8 @@ cameras:
       objects:
         - person
     type: "generic"
+    lpr:
+      enabled: False
     ffmpeg:
       input_args:
         - -fflags
@@ -168,6 +180,8 @@ cameras:
       objects:
         - person
     type: "generic"
+    lpr:
+      enabled: False
     ffmpeg:
       input_args:
         - -fflags
@@ -192,6 +206,8 @@ cameras:
     enabled: true
     webui_url: "https://192.168.86.33"
     type: "generic"
+    lpr:
+      enabled: False
     genai:
       enabled: True
       use_snapshot: True

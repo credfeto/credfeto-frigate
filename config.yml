@@ -13,6 +13,12 @@ audio:
 cameras:
   xmeye_front_left:
     enabled: true
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+        - car
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
@@ -26,6 +32,12 @@ cameras:
 
   xmeye_front_car:
     enabled: true
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+        - car
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
@@ -39,6 +51,11 @@ cameras:
 
   xmeye_front_right:
     enabled: true
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=3&stream=0.sdp
@@ -52,6 +69,11 @@ cameras:
 
   xmeye_garden_left:
     enabled: true
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
     ffmpeg:
       inputs:
         - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=4&stream=0.sdp
@@ -66,6 +88,11 @@ cameras:
   spro_garden_right:
     enabled: true
     webui_url: "https://192.168.86.30"
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
     ffmpeg:
       input_args:
         - -fflags
@@ -92,6 +119,11 @@ cameras:
   spro_garden_center:
     enabled: true
     webui_url: "https://192.168.86.31"
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
     ffmpeg:
       input_args:
         - -fflags
@@ -115,6 +147,11 @@ cameras:
   spro_cam_03:
     enabled: true
     webui_url: "https://192.168.86.32"
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
     ffmpeg:
       input_args:
         - -fflags
@@ -138,6 +175,11 @@ cameras:
   spro_cam_04:
     enabled: true
     webui_url: "https://192.168.86.33"
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
     ffmpeg:
       input_args:
         - -fflags

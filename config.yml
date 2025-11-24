@@ -44,7 +44,18 @@ cameras:
     detect:
       enabled: true
 
-  spro_cam_01:
+  xmeye_garden_left:
+    enabled: true
+    ffmpeg:
+      inputs:
+        - path: rtsp://192.168.86.48/user=admin&password=Shadow12&channel=4&stream=0.sdp
+          roles:
+            - detect
+            - record
+    detect:
+      enabled: true
+
+  spro_garden_right:
     enabled: true
     webui_url: "https://192.168.86.30"
     ffmpeg:
@@ -70,7 +81,7 @@ cameras:
     detect:
       enabled: true
 
-  spro_cam_02:
+  spro_garden_center:
     enabled: true
     webui_url: "https://192.168.86.31"
     ffmpeg:

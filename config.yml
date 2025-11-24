@@ -158,6 +158,23 @@ cameras:
       width: 2560
       height: 1440
 
+
+camera_groups:
+  Front:
+    order: 1
+    icon: LuCar
+    cameras:
+      - xmeye_front_left
+      - xmeye_front_car
+      - xmeye_front_right
+  Garden:
+    order: 2
+    icon: LuTreeDeciduous
+    cameras:
+      - xmeye_garden_left
+      - spro_garden_center
+      - spro_garden_right
+
 detect:
   enabled: true
 
@@ -330,4 +347,5 @@ model:
   input_pixel_format: bgr
   path: /openvino-model/ssdlite_mobilenet_v2.xml
   labelmap_path: /openvino-model/coco_91cl_bkgr.txt
+
 

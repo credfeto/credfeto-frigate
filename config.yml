@@ -17,7 +17,7 @@ audio:
 timestamp_style:
   position: "tl"
   format: "%Y-%m-%d %H:%M:%S"
-  effect: Shadow
+  effect: "shadow"
 
 cameras:
   xmeye_front_left:

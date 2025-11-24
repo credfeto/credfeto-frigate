@@ -26,6 +26,7 @@ cameras:
         # rtsp://viewer:Viewer1234@192.168.86.30/cam/realmonitor?channel=1&subtype=1
         - path: rtsp://viewer:Viewer1234@192.168.86.30/cam/realmonitor?channel=1&subtype=0
           roles:
+            - audio
             - detect
             - record
     onvif:

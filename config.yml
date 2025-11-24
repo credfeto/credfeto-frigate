@@ -8,7 +8,7 @@ auth:
   cookie_secure: True
 
 audio:
-  enabled: true
+  enabled: False
 
 cameras:
   xmeye_front_left:
@@ -21,7 +21,7 @@ cameras:
             - record
     detect:
       enabled: true
-      
+
   spro_cam_01:
     enabled: true
     webui_url: "https://192.168.86.30"

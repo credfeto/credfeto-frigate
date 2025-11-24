@@ -2,6 +2,10 @@ version: 0.16-0
 
 mqtt:
   enabled: true
+  host: 192.168.34.8
+  port: 1883
+  user: frigate
+  password: Frigate1234
 
 auth:
   enabled: True
@@ -394,6 +398,6 @@ model:
 genai:
   enabled: true
   provider: ollama
-  base_url: http://localhost:11434
+  base_url: http://192.168.34.49:11434
   # Supported models: llava, llava-llama3, llava-phi3, and moondream.
   model: llava:7b

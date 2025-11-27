@@ -233,6 +233,37 @@ cameras:
       width: 2560
       height: 1440
 
+  reolink_cam_01:
+    enabled: true
+    webui_url: "https://192.168.202.10"
+    type: "generic"
+    lpr:
+      enabled: False
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+    ffmpeg:
+      input_args:
+        - -fflags
+        - +genpts
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.202.10/Preview_01_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 192.168.202.33
+      port: 37777
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+      width: 2560
+      height: 1440
+
 
 camera_groups:
   Front:

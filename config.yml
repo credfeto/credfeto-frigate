@@ -255,7 +255,7 @@ cameras:
             - detect
             - record
     onvif:
-      host: 192.168.202.33
+      host: 192.168.202.10
       port: 8000
       user: viewer
       password: Viewer1234
@@ -280,6 +280,14 @@ camera_groups:
       - xmeye_garden_left
       - spro_garden_center
       - spro_garden_right
+
+  Test:
+    order: 3
+    icon: LuTreeDeciduous
+    cameras:
+      - spro_cam_03
+      - spro_cam_04
+      - reolink_cam_01
 
 detect:
   enabled: true
@@ -376,12 +384,13 @@ semantic_search:
   # Optional: Enable semantic search (default: shown below)
   enabled: True
   # Optional: Re-index embeddings database from historical tracked objects (default: shown below)
-  reindex: True
+  reindex: False
   # Optional: Set the model used for embeddings. (default: shown below)
-  model: "jinav1"
+  model: "jinav2"
   # Optional: Set the model size used for embeddings. (default: shown below)
   # NOTE: small model runs on CPU and large model runs on GPU
-  model_size: "small"
+  #model_size: "small"
+  model_size: "large"
 
 # Optional: Configuration for face recognition capability
 # NOTE: enabled, min_area can be overridden at the camera level

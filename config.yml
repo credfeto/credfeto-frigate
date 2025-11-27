@@ -256,13 +256,13 @@ cameras:
             - record
     onvif:
       host: 192.168.202.33
-      port: 37777
+      port: 8000
       user: viewer
       password: Viewer1234
     detect:
       enabled: true
-      width: 2560
-      height: 1440
+#      width: 2560
+#      height: 1440
 
 
 camera_groups:

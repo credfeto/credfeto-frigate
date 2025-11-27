@@ -118,9 +118,9 @@ cameras:
     lpr:
       enabled: False
     ffmpeg:
-      input_args:
-        - -fflags
-        - +genpts
+#      input_args:
+#        - -fflags
+#        - +genpts
       inputs:
         # Dahua
         # Main Channel
@@ -152,9 +152,9 @@ cameras:
     lpr:
       enabled: False
     ffmpeg:
-      input_args:
-        - -fflags
-        - +genpts
+#      input_args:
+#        - -fflags
+#        - +genpts
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.31/cam/realmonitor?channel=1&subtype=0
           roles:
@@ -183,9 +183,9 @@ cameras:
     lpr:
       enabled: False
     ffmpeg:
-      input_args:
-        - -fflags
-        - +genpts
+#      input_args:
+#        - -fflags
+#        - +genpts
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.32/cam/realmonitor?channel=1&subtype=0
           roles:
@@ -214,9 +214,9 @@ cameras:
       objects:
         - person
     ffmpeg:
-      input_args:
-        - -fflags
-        - +genpts
+#      input_args:
+#        - -fflags
+#        - +genpts
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.33/cam/realmonitor?channel=1&subtype=0
           roles:
@@ -245,9 +245,9 @@ cameras:
       objects:
         - person
     ffmpeg:
-      input_args:
-        - -fflags
-        - +genpts
+#      input_args:
+#        - -fflags
+#        - +genpts
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.10/Preview_01_main
           roles:

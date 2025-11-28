@@ -481,7 +481,7 @@ model:
   path: /openvino-model/ssdlite_mobilenet_v2.xml
 #  labelmap_path: /openvino-model/coco_91cl_bkgr.txt
   labelmap_path: /config/model_cache/yolov8/labels-frigate.txt
-  model_type: yolo8
+  model_type: yolox
 
 genai:
   enabled: true

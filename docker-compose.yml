@@ -51,13 +51,14 @@ services:
       - "/dev/kfd:/dev/kfd"
     security_opt:
       - seccomp:unconfined
+      - "label=disable"
     cap_add:
       - SYS_PTRACE
       - CAP_PERFMON
     ipc: host
     group_add:
       - video
-      - render
+#      - render
 #      - ssl/_ssl
     environment:
       - HSA_OVERRIDE_GFX_VERSION="12.0.0"

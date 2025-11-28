@@ -57,7 +57,7 @@ services:
     ipc: host
     group_add:
       - video
-#      - render
+      - render
 #      - ssl/_ssl
     environment:
       - HSA_OVERRIDE_GFX_VERSION="12.0.0"

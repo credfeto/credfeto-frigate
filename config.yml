@@ -479,8 +479,8 @@ model:
   input_tensor: nhwc
   input_pixel_format: bgr
   path: /openvino-model/ssdlite_mobilenet_v2.xml
-#  labelmap_path: /openvino-model/coco_91cl_bkgr.txt
-  labelmap_path: /config/model_cache/yolox/labels-frigate.txt
+  labelmap_path: /openvino-model/coco_91cl_bkgr.txt
+#  labelmap_path: /config/model_cache/yolox/labels-frigate.txt
   model_type: yolox
 
 genai:

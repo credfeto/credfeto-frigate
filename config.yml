@@ -447,17 +447,17 @@ lpr:
 
 
 detectors:
-  coral:
-    type: edgetpu
-    device: usb
-    model:
-      width: 320 # <--- should match the imgsize set during model export
-      height: 320 # <--- should match the imgsize set during model export
-      input_tensor: nhwc
-      model_type: ssd
-      input_pixel_format: rgb
-      path: /edgetpu_model.tflite
-      labelmap_path: /labelmap.txt
+#  coral:
+#    type: edgetpu
+#    device: usb
+#    model:
+#      width: 320 # <--- should match the imgsize set during model export
+#      height: 320 # <--- should match the imgsize set during model export
+#      input_tensor: nhwc
+#      model_type: ssd
+#      input_pixel_format: rgb
+#      path: /edgetpu_model.tflite
+#      labelmap_path: /labelmap.txt
 
 #  amd-gpu:
 #    type: onnx

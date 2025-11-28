@@ -39,7 +39,7 @@ services:
     container_name: frigate
     restart: always
     stop_grace_period: 30s
-    image: ghcr.io/blakeblackshear/frigate:stable
+    image: ghcr.io/blakeblackshear/frigate:stable-rocm
     shm_size: "2gb"
     privileged: true
     devices:
@@ -52,11 +52,11 @@ services:
       - "/dev/dxg:/dev/dxg"
     security_opt:
       - seccomp:unconfined
-    cap_add:
-      - SYS_PTRACE
-    ipc: host
-    group_add:
-      - video
+#    cap_add:
+#      - SYS_PTRACE
+#    ipc: host
+#    group_add:
+#      - video
 #    environment:
 #      - HSA_OVERRIDE_GFX_VERSION="12.0.0"
     volumes:

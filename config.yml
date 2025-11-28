@@ -451,11 +451,11 @@ detectors:
     type: rocm
     model:
       path: /config/model_cache/yolov8/yolov8s_320x320.onnx
-    coral:
-      type: edgetpu
-      device: usb
-      model:
-        path: /config/model_cache/yolov8/yolov8s_320x320_edgetpu.tflite
+#    coral:
+#      type: edgetpu
+#      device: usb
+#      model:
+#        path: /config/model_cache/yolov8/yolov8s_320x320_edgetpu.tflite
     openvino:
       type: openvino
       model:

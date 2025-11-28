@@ -17,7 +17,7 @@ services:
     ports:
       - "8080:8080/tcp"
     environment:
-      DOZZLE_HOSTNAME: dev-cache
+      DOZZLE_HOSTNAME: cctv
       # Uncomment to enable container actions (stop, start, restart). See https://dozzle.dev/guide/actions
       # - DOZZLE_ENABLE_ACTIONS=true
       #
@@ -39,9 +39,9 @@ services:
     container_name: frigate
     restart: always
     stop_grace_period: 30s
-    image: ghcr.io/blakeblackshear/frigate:stable
+    #image: ghcr.io/blakeblackshear/frigate:stable
     #image: ghcr.io/blakeblackshear/frigate:stable-rocm
-    #image: ghcr.io/blakeblackshear/frigate:cache-rocm
+    image: ghcr.io/blakeblackshear/frigate:cache-rocm
     shm_size: "2gb"
     privileged: true
     devices:

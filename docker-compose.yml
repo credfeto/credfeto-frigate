@@ -40,8 +40,8 @@ services:
     restart: always
     stop_grace_period: 30s
     #image: ghcr.io/blakeblackshear/frigate:stable
-    #image: ghcr.io/blakeblackshear/frigate:stable-rocm
-    image: ghcr.io/blakeblackshear/frigate:cache-rocm
+    image: ghcr.io/blakeblackshear/frigate:stable-rocm
+    #image: ghcr.io/blakeblackshear/frigate:cache-rocm
     shm_size: "2gb"
     privileged: true
     devices:

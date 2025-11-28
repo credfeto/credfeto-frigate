@@ -449,8 +449,7 @@ lpr:
 detectors:
   coral:
     type: edgetpu
-    device:
-      usb
+    device: usb
     model:
       width: 320 # <--- should match the imgsize set during model export
       height: 320 # <--- should match the imgsize set during model export
@@ -458,7 +457,6 @@ detectors:
       model_type: ssd
       input_pixel_format: rgb
       path: /edgetpu_model.tflite
-      #path: /openvino-model/ssdlite_mobilenet_v2.xml
       labelmap_path: /labelmap.txt
 #
 #
@@ -473,9 +471,18 @@ detectors:
 #      path: /openvino-model/ssdlite_mobilenet_v2.xml
 #      labelmap_path: /openvino-model/coco_91cl_bkgr.txt
 
-#  intel-gpu:
-#    type: openvino
-#    device: GPU
+  intel-gpu:
+    type: openvino
+    device: GPU
+    model:
+      width: 320 # <--- should match the imgsize set during model export
+      height: 320 # <--- should match the imgsize set during model export
+      input_tensor: nhwc
+      model_type: ssd
+      input_pixel_format: rgb
+      path: /edgetpu_model.tflite
+      labelmap_path: /labelmap.txt
+
 #    model:
 #      width: 300
 #      height: 300

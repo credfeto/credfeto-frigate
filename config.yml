@@ -459,8 +459,12 @@ detectors:
 #      path: /edgetpu_model.tflite
 #      labelmap_path: /labelmap.txt
 
-  amd-gpu:
-    type: onnx
+# Waiting for AMD and frigate to have a release with AMD 1200
+# rocblaslt error: Could not load /opt/rocm/lib/hipblaslt/library/TensileLibrary_lazy_gfx1200.dat
+#  hipBLASLt error: Heuristic Fetch Failed!
+#  This message will be only be displayed once, unless the ROCBLAS_VERBOSE_HIPBLASLT_ERROR environment variable is set.
+#  amd-gpu:
+#    type: onnx
 
 
   intel-gpu:

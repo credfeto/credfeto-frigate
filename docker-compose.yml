@@ -39,7 +39,7 @@ services:
     container_name: frigate
     restart: always
     stop_grace_period: 30s
-    image: ghcr.io/blakeblackshear/frigate:stable-rocm
+    image: ghcr.io/blakeblackshear/frigate:stable
     shm_size: "2gb"
     privileged: true
     devices:
@@ -52,15 +52,11 @@ services:
       - "/dev/dxg:/dev/dxg"
     security_opt:
       - seccomp:unconfined
-      - "label=disable"
     cap_add:
       - SYS_PTRACE
-      - CAP_PERFMON
     ipc: host
     group_add:
       - video
-#      - render
-#      - ssl/_ssl
     environment:
       - HSA_OVERRIDE_GFX_VERSION="12.0.0"
     volumes:
@@ -71,8 +67,8 @@ services:
         tmpfs:
           size: 1000000000
     ports:
-      - "8971:8971"
-      - "5000:5000"
+      - "8971:8971" # Public Website
+      - "5000:5000" # Unsecure API (for Home assistant)
       - "8554:8554" # RTSP feeds
 
 volumes:

@@ -469,8 +469,8 @@ detectors:
 # rocblaslt error: Could not load /opt/rocm/lib/hipblaslt/library/TensileLibrary_lazy_gfx1200.dat
 #  hipBLASLt error: Heuristic Fetch Failed!
 #  This message will be only be displayed once, unless the ROCBLAS_VERBOSE_HIPBLASLT_ERROR environment variable is set.
-#  amd-gpu:
-#    type: onnx
+  amd-gpu:
+    type: onnx
 
 
   intel-gpu:

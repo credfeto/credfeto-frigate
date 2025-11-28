@@ -498,13 +498,23 @@ detectors:
     device: CPU
 
 model:
+#  model_type: yolo-generic
+#  width: 640 # <--- should match the imgsize set during model export
+#  height: 640 # <--- should match the imgsize set during model export
+#  input_tensor: nchw
+#  input_pixel_format: rgb
+#  input_dtype: float
+#  path: /config/model_cache/yolov9/yolov9-m-640.onnx
+#  labelmap_path: /labelmap/coco-80.txt
+
+
   model_type: yolo-generic
-  width: 640 # <--- should match the imgsize set during model export
-  height: 640 # <--- should match the imgsize set during model export
+  width: 320 # <--- should match the imgsize set during model export
+  height: 320 # <--- should match the imgsize set during model export
   input_tensor: nchw
   input_pixel_format: rgb
   input_dtype: float
-  path: /config/model_cache/yolov9/yolov9-m-640.onnx
+  path: /config/model_cache/yolov9/yolov9-m-320.onnx
   labelmap_path: /labelmap/coco-80.txt
 
 

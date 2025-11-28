@@ -43,7 +43,11 @@ services:
     shm_size: "2gb"
     privileged: true
     devices:
+      # Passes the USB Coral, needs to be modified for other versions
+      - "/dev/bus/usb:/dev/bus/usb"
+      # GPU
       - "/dev/dri:/dev/dri"
+      # Amd GPU
       - "/dev/kfd:/dev/kfd"
     security_opt:
       - seccomp:unconfined

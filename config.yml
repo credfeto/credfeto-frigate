@@ -459,8 +459,8 @@ detectors:
 #      path: /edgetpu_model.tflite
 #      labelmap_path: /labelmap.txt
 
-  amd-gpu:
-    type: onnx
+#  amd-gpu:
+#    type: onnx
 
   #    model:
 #      width: 300

@@ -447,17 +447,31 @@ lpr:
 
 
 detectors:
-#  coral:
-#    type: edgetpu
-#    device:
-#      usb
-  ov_0:
-    type: openvino
-    device: GPU
+  rocm:
+    type: rocm
+    model:
+      path: /config/model_cache/yolov8/yolov8s_320x320.onnx
+    coral:
+      type: edgetpu
+      device: usb
+      model:
+        path: /config/model_cache/yolov8/yolov8s_320x320_edgetpu.tflite
+    openvino:
+      type: openvino
+      model:
+        path: /config/model_cache/yolov8/yolov8s_320x320_i8_openvino.xml
 
-  ov_1:
-    type: openvino
-    device: GPU
+##  coral:
+##    type: edgetpu
+##    device:
+##      usb
+#  d1:
+#    type: openvino
+#    device: rocm
+#
+#  d2:
+#    type: openvino
+#    device: GPU
 
 model:
   width: 300
@@ -465,8 +479,9 @@ model:
   input_tensor: nhwc
   input_pixel_format: bgr
   path: /openvino-model/ssdlite_mobilenet_v2.xml
-  labelmap_path: /openvino-model/coco_91cl_bkgr.txt
-
+#  labelmap_path: /openvino-model/coco_91cl_bkgr.txt
+  labelmap_path: /config/model_cache/yolov8/labels-frigate.txt
+  model_type: yolov8
 
 genai:
   enabled: true

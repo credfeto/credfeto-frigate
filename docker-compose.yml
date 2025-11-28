@@ -49,6 +49,7 @@ services:
       - "/dev/dri:/dev/dri"
       # Amd GPU
       - "/dev/kfd:/dev/kfd"
+      - "/dev/dxg:/dev/dxg"
     security_opt:
       - seccomp:unconfined
       - "label=disable"

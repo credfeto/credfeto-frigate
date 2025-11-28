@@ -283,7 +283,7 @@ camera_groups:
 
   Test:
     order: 3
-    icon: LuTreeDeciduous
+    icon: LuCctv
     cameras:
       - spro_cam_03
       - spro_cam_04

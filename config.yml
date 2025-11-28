@@ -19,6 +19,10 @@ timestamp_style:
   format: "%Y-%m-%d %H:%M:%S"
   effect: "shadow"
 
+ffmpeg:
+  hwaccel_args: preset-vaapi
+
+
 cameras:
   xmeye_front_left:
     enabled: true
@@ -32,6 +36,7 @@ cameras:
     lpr:
       enabled: True
     ffmpeg:
+      hwaccel_args: preset-vaapi
       inputs:
         - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
           roles:
@@ -54,6 +59,7 @@ cameras:
     lpr:
       enabled: True
     ffmpeg:
+      hwaccel_args: preset-vaapi
       inputs:
         - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
           roles:

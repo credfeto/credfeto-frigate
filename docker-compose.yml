@@ -54,8 +54,9 @@ services:
       - "/dev/dxg:/dev/dxg"
     security_opt:
       - seccomp:unconfined
-#    cap_add:
-#      - SYS_PTRACE
+    cap_add:
+      - SYS_PTRACE
+      - CAP_PERFMON
 #    ipc: host
 #    group_add:
 #      - video

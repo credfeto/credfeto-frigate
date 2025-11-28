@@ -460,8 +460,7 @@ detectors:
 #      labelmap_path: /labelmap.txt
 
   amd-gpu:
-    type: openvino
-    device: onnx
+    type: onnx
 
 #    model:
 #      width: 300

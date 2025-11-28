@@ -63,7 +63,7 @@ services:
     environment:
 #      - HSA_OVERRIDE_GFX_VERSION="11.0.0"
       - TORCH_BLAS_PREFER_HIPBLASLT=0
-      - LIBVA_DRIVER_NAME=radeonsi
+#      - LIBVA_DRIVER_NAME=radeonsi
     volumes:
       - frigate_config:/config
       - frigate_storage:/media/frigate

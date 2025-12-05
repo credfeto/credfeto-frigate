@@ -316,16 +316,12 @@ camera_groups:
     order: 2
     icon: LuTreeDeciduous
     cameras:
-      - xmeye_garden_left
-      - spro_garden_center
-      - spro_garden_right
+      - reolink_cam_01
 
   Test:
     order: 3
     icon: LuCctv
     cameras:
-      - spro_cam_03
-      - spro_cam_04
       - reolink_cam_01
       - reolink_cam_02
       - reolink_cam_03

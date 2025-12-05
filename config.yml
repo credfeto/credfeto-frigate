@@ -85,162 +85,162 @@ cameras:
       width: 1900
       height: 1080
 
-  xmeye_garden_left:
-    enabled: true
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-    type: "generic"
-    lpr:
-      enabled: False
-    ffmpeg:
-      inputs:
-        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=4&stream=0.sdp
-          roles:
-            - detect
-            - record
-    detect:
-      enabled: true
-      width: 1900
-      height: 1080
+#  xmeye_garden_left:
+#    enabled: true
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#    type: "generic"
+#    lpr:
+#      enabled: False
+#    ffmpeg:
+#      inputs:
+#        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=4&stream=0.sdp
+#          roles:
+#            - detect
+#            - record
+#    detect:
+#      enabled: true
+#      width: 1900
+#      height: 1080
 
-  spro_garden_right:
+#  spro_garden_right:
+#    enabled: true
+#    webui_url: "https://192.168.202.30"
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#    type: "generic"
+#    lpr:
+#      enabled: False
+#    ffmpeg:
+#      inputs:
+#        # Dahua
+#        # Main Channel
+#        # rtsp://viewer:Viewer1234@192.168.202.30/cam/realmonitor?channel=1&subtype=0
+#        # Sub Channel
+#        # rtsp://viewer:Viewer1234@192.168.202.30/cam/realmonitor?channel=1&subtype=1
+#        - path: rtsp://viewer:Viewer1234@192.168.202.30/cam/realmonitor?channel=1&subtype=0
+#          roles:
+#            - audio
+#            - detect
+#            - record
+#    onvif:
+#      host: 192.168.202.30
+#      port: 37777
+#      user: viewer
+#      password: Viewer1234
+#    detect:
+#      enabled: true
+
+#  spro_garden_center:
+#    enabled: true
+#    webui_url: "https://192.168.202.31"
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#    type: "generic"
+#    lpr:
+#      enabled: False
+#    ffmpeg:
+#      inputs:
+#        - path: rtsp://viewer:Viewer1234@192.168.202.31/cam/realmonitor?channel=1&subtype=0
+#          roles:
+#            - audio
+#            - detect
+#            - record
+#    onvif:
+#      host: 192.168.202.31
+#      port: 37777
+#      user: viewer
+#      password: Viewer1234
+#    detect:
+#      enabled: true
+#      width: 2560
+#      height: 1440
+
+#  spro_cam_03:
+#    enabled: true
+#    webui_url: "https://192.168.202.32"
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#    type: "generic"
+#    lpr:
+#      enabled: False
+#    ffmpeg:
+#      inputs:
+#        - path: rtsp://viewer:Viewer1234@192.168.202.32/cam/realmonitor?channel=1&subtype=0
+#          roles:
+#            - audio
+#            - detect
+#            - record
+#    onvif:
+#      host: 192.168.202.32
+#      port: 37777
+#      user: viewer
+#      password: Viewer1234
+#    detect:
+#      enabled: true
+#      width: 2560
+#      height: 1440
+
+#  spro_cam_04:
+#    enabled: true
+#    webui_url: "https://192.168.202.33"
+#    type: "generic"
+#    lpr:
+#      enabled: False
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#    ffmpeg:
+#      inputs:
+#        - path: rtsp://viewer:Viewer1234@192.168.202.33/cam/realmonitor?channel=1&subtype=0
+#          roles:
+#            - audio
+#            - detect
+#            - record
+#    onvif:
+#      host: 192.168.202.33
+#      port: 37777
+#      user: viewer
+#      password: Viewer1234
+#    detect:
+#      enabled: true
+#      width: 2560
+#      height: 1440
+
+  reolink_garden_left:
     enabled: true
-    webui_url: "https://192.168.202.30"
+    webui_url: "https://172.16.25.15"
+    type: "generic"
+    lpr:
+      enabled: False
     genai:
       enabled: True
       use_snapshot: True
       objects:
         - person
-    type: "generic"
-    lpr:
-      enabled: False
     ffmpeg:
       inputs:
-        # Dahua
-        # Main Channel
-        # rtsp://viewer:Viewer1234@192.168.202.30/cam/realmonitor?channel=1&subtype=0
-        # Sub Channel
-        # rtsp://viewer:Viewer1234@192.168.202.30/cam/realmonitor?channel=1&subtype=1
-        - path: rtsp://viewer:Viewer1234@192.168.202.30/cam/realmonitor?channel=1&subtype=0
+        - path: rtsp://viewer:Viewer1234@172.16.25.15/Preview_01_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 192.168.202.30
-      port: 37777
-      user: viewer
-      password: Viewer1234
-    detect:
-      enabled: true
-
-  spro_garden_center:
-    enabled: true
-    webui_url: "https://192.168.202.31"
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-    type: "generic"
-    lpr:
-      enabled: False
-    ffmpeg:
-      inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.31/cam/realmonitor?channel=1&subtype=0
-          roles:
-            - audio
-            - detect
-            - record
-    onvif:
-      host: 192.168.202.31
-      port: 37777
-      user: viewer
-      password: Viewer1234
-    detect:
-      enabled: true
-      width: 2560
-      height: 1440
-
-  spro_cam_03:
-    enabled: true
-    webui_url: "https://192.168.202.32"
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-    type: "generic"
-    lpr:
-      enabled: False
-    ffmpeg:
-      inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.32/cam/realmonitor?channel=1&subtype=0
-          roles:
-            - audio
-            - detect
-            - record
-    onvif:
-      host: 192.168.202.32
-      port: 37777
-      user: viewer
-      password: Viewer1234
-    detect:
-      enabled: true
-      width: 2560
-      height: 1440
-
-  spro_cam_04:
-    enabled: true
-    webui_url: "https://192.168.202.33"
-    type: "generic"
-    lpr:
-      enabled: False
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-    ffmpeg:
-      inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.33/cam/realmonitor?channel=1&subtype=0
-          roles:
-            - audio
-            - detect
-            - record
-    onvif:
-      host: 192.168.202.33
-      port: 37777
-      user: viewer
-      password: Viewer1234
-    detect:
-      enabled: true
-      width: 2560
-      height: 1440
-
-  reolink_cam_01:
-    enabled: true
-    webui_url: "https://192.168.202.10"
-    type: "generic"
-    lpr:
-      enabled: False
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-    ffmpeg:
-      inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.10/Preview_01_main
-          roles:
-            - audio
-            - detect
-            - record
-    onvif:
-      host: 192.168.202.10
+      host: 172.16.25.15
       port: 8000
       user: viewer
       password: Viewer1234

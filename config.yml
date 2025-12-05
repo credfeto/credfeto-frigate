@@ -234,20 +234,20 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.15/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.16/Preview_01_main
           roles:
             - audio
             - detect
             - record
-    onvif:
-      host: 172.16.25.15
-      port: 8000
-      user: viewer
-      password: Viewer1234
-    detect:
-      enabled: true
-#      width: 2560
-#      height: 1440
+#    onvif:
+#      host: 172.16.25.15
+#      port: 8000
+#      user: viewer
+#      password: Viewer1234
+#    detect:
+#      enabled: true
+##      width: 2560
+##      height: 1440
 
   garden_center:
     enabled: true

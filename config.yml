@@ -249,7 +249,61 @@ cameras:
 #      width: 2560
 #      height: 1440
 
+  reolink_cam_02:
+    enabled: true
+    webui_url: "https://192.168.202.11"
+    type: "generic"
+    lpr:
+      enabled: False
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.202.11/Preview_01_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 192.168.202.11
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+#      width: 2560
+#      height: 1440
 
+  reolink_cam_03:
+    enabled: true
+    webui_url: "https://192.168.202.12"
+    type: "generic"
+    lpr:
+      enabled: False
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.202.12/Preview_01_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 192.168.202.12
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+#      width: 2560
+#      height: 1440
 camera_groups:
   Front:
     order: 1
@@ -273,6 +327,8 @@ camera_groups:
       - spro_cam_03
       - spro_cam_04
       - reolink_cam_01
+      - reolink_cam_02
+      - reolink_cam_03
 
 detect:
   enabled: true

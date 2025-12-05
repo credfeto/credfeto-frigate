@@ -223,7 +223,7 @@ cameras:
 
   reolink_garden_left:
     enabled: true
-    webui_url: "https://172.16.25.15"
+    webui_url: "https://192.168.202.47"
     type: "generic"
     lpr:
       enabled: False
@@ -234,13 +234,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.15/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_01_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 172.16.25.15
+      host: 192.168.202.47
       port: 8000
       user: viewer
       password: Viewer1234

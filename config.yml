@@ -239,15 +239,15 @@ cameras:
             - audio
             - detect
             - record
-#    onvif:
-#      host: 172.16.25.15
-#      port: 8000
-#      user: viewer
-#      password: Viewer1234
-#    detect:
-#      enabled: true
-##      width: 2560
-##      height: 1440
+    onvif:
+      host: 192.168.202.16
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+#      width: 2560
+#      height: 1440
 
   garden_center:
     enabled: true
@@ -262,13 +262,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.17/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.16/Preview_02_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 172.16.25.17
+      host: 192.168.202.16
       port: 8000
       user: viewer
       password: Viewer1234
@@ -290,13 +290,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.14/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.16/Preview_03_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 172.16.25.14
+      host: 192.168.202.16
       port: 8000
       user: viewer
       password: Viewer1234
@@ -318,13 +318,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.13/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.16/Preview_04_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 172.16.25.13
+      host: 192.168.202.16
       port: 8000
       user: viewer
       password: Viewer1234
@@ -346,13 +346,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.16/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.16/Preview_05_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 172.16.25.16
+      host: 192.168.202.16
       port: 8000
       user: viewer
       password: Viewer1234
@@ -374,13 +374,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@172.16.25.18/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.16/Preview_06_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 172.16.25.18
+      host: 192.168.202.16
       port: 8000
       user: viewer
       password: Viewer1234

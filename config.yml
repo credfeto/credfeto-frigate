@@ -221,9 +221,9 @@ cameras:
 #      width: 2560
 #      height: 1440
 
-  reolink_garden_left:
+  garden_left:
     enabled: true
-    webui_url: "https://192.168.202.47"
+    webui_url: "https://172.16.25.15"
     type: "generic"
     lpr:
       enabled: False
@@ -234,13 +234,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@172.16.25.15/Preview_01_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 192.168.202.47
+      host: 172.16.25.15
       port: 8000
       user: viewer
       password: Viewer1234
@@ -249,9 +249,9 @@ cameras:
 #      width: 2560
 #      height: 1440
 
-  reolink_cam_02:
+  garden_center:
     enabled: true
-    webui_url: "https://192.168.202.11"
+    webui_url: "https://172.16.25.17"
     type: "generic"
     lpr:
       enabled: False
@@ -262,13 +262,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.11/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@172.16.25.17/Preview_01_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 192.168.202.11
+      host: 172.16.25.17
       port: 8000
       user: viewer
       password: Viewer1234
@@ -277,9 +277,9 @@ cameras:
 #      width: 2560
 #      height: 1440
 
-  reolink_cam_03:
+  garden_right:
     enabled: true
-    webui_url: "https://192.168.202.12"
+    webui_url: "https://172.16.25.14"
     type: "generic"
     lpr:
       enabled: False
@@ -290,13 +290,13 @@ cameras:
         - person
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.12/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@172.16.25.14/Preview_01_main
           roles:
             - audio
             - detect
             - record
     onvif:
-      host: 192.168.202.12
+      host: 172.16.25.14
       port: 8000
       user: viewer
       password: Viewer1234
@@ -304,6 +304,92 @@ cameras:
       enabled: true
 #      width: 2560
 #      height: 1440
+
+  reolink-cam-04:
+    enabled: true
+    webui_url: "https://172.16.25.13"
+    type: "generic"
+    lpr:
+      enabled: False
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@172.16.25.13/Preview_01_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 172.16.25.13
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+#      width: 2560
+#      height: 1440
+
+  reolink-cam-05:
+    enabled: true
+    webui_url: "https://172.16.25.16"
+    type: "generic"
+    lpr:
+      enabled: False
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@172.16.25.16/Preview_01_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 172.16.25.16
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+#      width: 2560
+#      height: 1440
+
+  reolink-cam-06:
+    enabled: true
+    webui_url: "https://172.16.25.18"
+    type: "generic"
+    lpr:
+      enabled: False
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@172.16.25.18/Preview_01_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 172.16.25.18
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+#      width: 2560
+#      height: 1440
+
+
 camera_groups:
   Front:
     order: 1
@@ -316,15 +402,17 @@ camera_groups:
     order: 2
     icon: LuTreeDeciduous
     cameras:
-      - reolink_cam_01
+      - garden_left
+      - garden_center
+      - garden_right
 
   Test:
     order: 3
     icon: LuCctv
     cameras:
-      - reolink_cam_01
-      - reolink_cam_02
-      - reolink_cam_03
+      - reolink-cam-04
+      - reolink-cam-05
+      - reolink-cam-06
 
 detect:
   enabled: true

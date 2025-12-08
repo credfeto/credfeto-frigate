@@ -616,6 +616,10 @@ detectors:
     type: openvino
     device: GPU
 
+  amd-gpu:
+    type: openvino
+    device: GPU
+
 #model:
 #  width: 300 # <--- should match the imgsize set during model export
 #  height: 300 # <--- should match the imgsize set during model export

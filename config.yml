@@ -20,27 +20,27 @@ timestamp_style:
   effect: "shadow"
 
 cameras:
-  xmeye_front_left:
-    enabled: true
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-        - car
-    type: "lpr"
-    lpr:
-      enabled: True
-    ffmpeg:
-      inputs:
-        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
-          roles:
-            - detect
-            - record
-    detect:
-      enabled: true
-      width: 1900
-      height: 1080
+#  xmeye_front_left:
+#    enabled: true
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#        - car
+#    type: "lpr"
+#    lpr:
+#      enabled: True
+#    ffmpeg:
+#      inputs:
+#        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
+#          roles:
+#            - detect
+#            - record
+#    detect:
+#      enabled: true
+#      width: 1900
+#      height: 1080
 
   xmeye_front_car:
     enabled: true
@@ -64,26 +64,26 @@ cameras:
       width: 1900
       height: 1080
 
-  xmeye_front_right:
-    enabled: true
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-    type: "lpr"
-    lpr:
-      enabled: True
-    ffmpeg:
-      inputs:
-        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=3&stream=0.sdp
-          roles:
-            - detect
-            - record
-    detect:
-      enabled: true
-      width: 1900
-      height: 1080
+#  xmeye_front_right:
+#    enabled: true
+#    genai:
+#      enabled: True
+#      use_snapshot: True
+#      objects:
+#        - person
+#    type: "lpr"
+#    lpr:
+#      enabled: True
+#    ffmpeg:
+#      inputs:
+#        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=3&stream=0.sdp
+#          roles:
+#            - detect
+#            - record
+#    detect:
+#      enabled: true
+#      width: 1900
+#      height: 1080
 
 #  xmeye_garden_left:
 #    enabled: true
@@ -305,7 +305,7 @@ cameras:
 #      width: 2560
 #      height: 1440
 
-  reolink-cam-04:
+  front-left:
     enabled: true
     webui_url: "https://172.16.25.13"
     type: "generic"
@@ -333,7 +333,7 @@ cameras:
 #      width: 2560
 #      height: 1440
 
-  reolink-cam-05:
+  front-center:
     enabled: true
     webui_url: "https://172.16.25.16"
     type: "generic"
@@ -361,7 +361,7 @@ cameras:
 #      width: 2560
 #      height: 1440
 
-  reolink-cam-06:
+  front-right:
     enabled: true
     webui_url: "https://172.16.25.18"
     type: "generic"
@@ -395,9 +395,9 @@ camera_groups:
     order: 1
     icon: LuCar
     cameras:
-      - xmeye_front_left
+      - front-left
       - xmeye_front_car
-      - xmeye_front_right
+      - front-right
   Garden:
     order: 2
     icon: LuTreeDeciduous
@@ -410,9 +410,9 @@ camera_groups:
     order: 3
     icon: LuCctv
     cameras:
-      - reolink-cam-04
-      - reolink-cam-05
-      - reolink-cam-06
+#      - xmeye_front_left
+      - front-center
+#      - xmeye_front_right
 
 detect:
   enabled: true

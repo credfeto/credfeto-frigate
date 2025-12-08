@@ -232,6 +232,8 @@ cameras:
       use_snapshot: True
       objects:
         - person
+        - cat
+        - dog
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_01_main
@@ -260,6 +262,8 @@ cameras:
       use_snapshot: True
       objects:
         - person
+        - cat
+        - dog
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_02_main
@@ -288,6 +292,8 @@ cameras:
       use_snapshot: True
       objects:
         - person
+        - cat
+        - dog
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_03_main
@@ -310,12 +316,15 @@ cameras:
     webui_url: "https://172.16.25.13"
     type: "generic"
     lpr:
-      enabled: False
+      enabled: True
     genai:
       enabled: True
       use_snapshot: True
       objects:
         - person
+        - car
+        - dog
+        - cat
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_04_main
@@ -338,12 +347,15 @@ cameras:
     webui_url: "https://172.16.25.16"
     type: "generic"
     lpr:
-      enabled: False
+      enabled: True
     genai:
       enabled: True
       use_snapshot: True
       objects:
         - person
+        - car
+        - dog
+        - cat
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_05_main
@@ -366,12 +378,15 @@ cameras:
     webui_url: "https://172.16.25.18"
     type: "generic"
     lpr:
-      enabled: False
+      enabled: True
     genai:
       enabled: True
       use_snapshot: True
       objects:
         - person
+        - car
+        - dog
+        - cat
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_06_main

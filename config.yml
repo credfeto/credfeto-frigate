@@ -20,6 +20,37 @@ timestamp_style:
   effect: "shadow"
 
 cameras:
+  front-left:
+    enabled: true
+    webui_url: "https://172.16.25.13"
+    type: "generic"
+    lpr:
+      enabled: True
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+        - car
+        - dog
+        - cat
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_04_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 192.168.202.47
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
+      enabled: true
+  #      width: 2560
+  #      height: 1440
+
 
   front-center:
     enabled: true
@@ -52,38 +83,38 @@ cameras:
     #      width: 2560
     #      height: 1440
 
-    front-right:
+  front-right:
+    enabled: true
+    webui_url: "https://172.16.25.18"
+    type: "generic"
+    lpr:
+      enabled: True
+    genai:
+      enabled: True
+      use_snapshot: True
+      objects:
+        - person
+        - car
+        - dog
+        - cat
+    ffmpeg:
+      inputs:
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_06_main
+          roles:
+            - audio
+            - detect
+            - record
+    onvif:
+      host: 192.168.202.47
+      port: 8000
+      user: viewer
+      password: Viewer1234
+    detect:
       enabled: true
-      webui_url: "https://172.16.25.18"
-      type: "generic"
-      lpr:
-        enabled: True
-      genai:
-        enabled: True
-        use_snapshot: True
-        objects:
-          - person
-          - car
-          - dog
-          - cat
-      ffmpeg:
-        inputs:
-          - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_06_main
-            roles:
-              - audio
-              - detect
-              - record
-      onvif:
-        host: 192.168.202.47
-        port: 8000
-        user: viewer
-        password: Viewer1234
-      detect:
-        enabled: true
-  #      width: 2560
-  #      height: 1440
+#      width: 2560
+#      height: 1440
 
-  #  xmeye_front_left:
+#  xmeye_front_left:
 #    enabled: true
 #    genai:
 #      enabled: True
@@ -360,37 +391,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_03_main
-          roles:
-            - audio
-            - detect
-            - record
-    onvif:
-      host: 192.168.202.47
-      port: 8000
-      user: viewer
-      password: Viewer1234
-    detect:
-      enabled: true
-#      width: 2560
-#      height: 1440
-
-  front-left:
-    enabled: true
-    webui_url: "https://172.16.25.13"
-    type: "generic"
-    lpr:
-      enabled: True
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - person
-        - car
-        - dog
-        - cat
-    ffmpeg:
-      inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_04_main
           roles:
             - audio
             - detect

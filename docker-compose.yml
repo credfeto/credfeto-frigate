@@ -42,7 +42,7 @@ services:
     image: ghcr.io/blakeblackshear/frigate:stable
     #image: ghcr.io/blakeblackshear/frigate:stable-rocm
     #image: ghcr.io/blakeblackshear/frigate:cache-rocm
-    shm_size: "2gb"
+    shm_size: "3gb"
     privileged: true
     devices:
       # Passes the USB Coral, needs to be modified for other versions

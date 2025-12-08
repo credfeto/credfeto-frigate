@@ -14,8 +14,8 @@ auth:
 audio:
   enabled: False
 
-ffmpeg:
-  hwaccel_args: preset-vaapi
+#ffmpeg:
+#  hwaccel_args: preset-vaapi
 
 timestamp_style:
   position: "tl"

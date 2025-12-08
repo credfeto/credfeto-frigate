@@ -40,7 +40,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_04_main
-          input_args: preset-http-reolink
           roles:
             - audio
             - detect
@@ -73,7 +72,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_05_main
-          input_args: preset-http-reolink
           roles:
             - audio
             - detect
@@ -105,7 +103,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_06_main
-          input_args: preset-http-reolink
           roles:
             - audio
             - detect
@@ -156,7 +153,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
-          input_args: preset-http-generic
           roles:
             - detect
             - record
@@ -338,7 +334,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_01_main
-          input_args: preset-http-reolink
           roles:
             - audio
             - detect
@@ -369,7 +364,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_02_main
-          input_args: preset-http-reolink
           roles:
             - audio
             - detect
@@ -400,7 +394,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_03_main
-          input_args: preset-http-reolink
           roles:
             - audio
             - detect

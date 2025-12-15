@@ -23,6 +23,13 @@ timestamp_style:
   format: "%Y-%m-%d %H:%M:%S"
   effect: "shadow"
 
+go2rtc:
+  streams:
+    front-left:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_main#video=copy#audio=copy#audio=aac
+    front-left-sub:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_sub
+
 cameras:
   front-left:
     enabled: true
@@ -40,10 +47,20 @@ cameras:
         - cat
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_sub
+        - path: rtsp://127.0.0.1:8554/front-left-sub
+          input-args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - Frigate
           roles:
             - detect
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_main
+        - path: rtsp://127.0.0.1:8554/front-left
+          input-args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - Frigate
           roles:
             - audio
             - record

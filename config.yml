@@ -15,7 +15,7 @@ audio:
   enabled: False
 
 ffmpeg:
-  input-args: preset-rtsp-generic
+  input_args: preset-rtsp-generic
 #  hwaccel_args: preset-vaapi
 
 timestamp_style:

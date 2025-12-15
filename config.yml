@@ -25,10 +25,40 @@ timestamp_style:
 
 go2rtc:
   streams:
+    garden-left:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_01_main#video=copy#audio=copy#audio=aac
+    garden-left-sub:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_01_sub
+
+    garden-center:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_02_main#video=copy#audio=copy#audio=aac
+    garden-center-sub:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_02_sub
+
+    garden-right:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_03_main#video=copy#audio=copy#audio=aac
+    garden-right-sub:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_03_sub
+
     front-left:
       - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_main#video=copy#audio=copy#audio=aac
     front-left-sub:
       - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_sub
+
+    front-center:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_05_main#video=copy#audio=copy#audio=aac
+    front-center-sub:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_05_sub
+
+    front-right:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_main#video=copy#audio=copy#audio=aac
+    front-right-sub:
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_sub
+
+    front-car-xmeye:
+      - ffmpeg:rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
+    front-car-xmeye-sub:
+      - ffmpeg:rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=1.sdp
 
 cameras:
   front-left:
@@ -91,10 +121,20 @@ cameras:
         - cat
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_05_sub
+        - path: rtsp://127.0.0.1:8554/front-center-sub
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - detect
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_05_main
+        - path: rtsp://127.0.0.1:8554/front-center
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - audio
             - record
@@ -124,10 +164,20 @@ cameras:
         - cat
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_06_sub
+        - path: rtsp://127.0.0.1:8554/front-right-sub
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - detect
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_06_main
+        - path: rtsp://127.0.0.1:8554/front-right
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - audio
             - record
@@ -138,30 +188,6 @@ cameras:
       password: Viewer1234
     detect:
       enabled: true
-#      width: 2560
-#      height: 1440
-
-#  xmeye_front_left:
-#    enabled: true
-#    genai:
-#      enabled: True
-#      use_snapshot: True
-#      objects:
-#        - person
-#        - car
-#    type: "lpr"
-#    lpr:
-#      enabled: True
-#    ffmpeg:
-#      inputs:
-#        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=1&stream=0.sdp
-#          roles:
-#            - detect
-#            - record
-#    detect:
-#      enabled: true
-#      width: 1900
-#      height: 1080
 
   xmeye_front_car:
     enabled: true
@@ -176,9 +202,21 @@ cameras:
       enabled: True
     ffmpeg:
       inputs:
-        - path: rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
+        - path: rtsp://127.0.0.1:8554/front-car-xmeye-sub
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - detect
+        - path: rtsp://127.0.0.1:8554/front-car-xmeye
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
+          roles:
             - record
     detect:
       enabled: true
@@ -200,10 +238,20 @@ cameras:
         - dog
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_01_sub
+        - path: rtsp://127.0.0.1:8554/garden-left-sub
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - detect
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_01_main
+        - path: rtsp://127.0.0.1:8554/garden-left
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - audio
             - record
@@ -232,10 +280,20 @@ cameras:
         - dog
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_02_sub
+        - path: rtsp://127.0.0.1:8554/garden-center-sub
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - detect
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_02_main
+        - path: rtsp://127.0.0.1:8554/garden-center
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - audio
             - record
@@ -264,10 +322,20 @@ cameras:
         - dog
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_03_sub
+        - path: rtsp://127.0.0.1:8554/garden-right-sub
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - detect
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_03_main
+        - path: rtsp://127.0.0.1:8554/garden-right
+          input_args:
+            - -rtsp_transport
+            - tcp
+            - -user_agent
+            - FFmpeg Frigate
           roles:
             - audio
             - record

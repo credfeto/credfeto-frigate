@@ -52,7 +52,7 @@ cameras:
             - -rtsp_transport
             - tcp
             - -user_agent
-            - Frigate
+            - FFmpeg Frigate
           roles:
             - detect
         - path: rtsp://127.0.0.1:8554/front-left

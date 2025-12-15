@@ -492,9 +492,9 @@ detectors:
 #      path: /openvino-model/ssdlite_mobilenet_v2.xml
 #      labelmap_path: /openvino-model/coco_91cl_bkgr.txt
 
-  intel-cpu:
-    type: openvino
-    device: CPU
+#  intel-cpu:
+#    type: openvino
+#    device: CPU
 
 model:
 #  model_type: yolo-generic

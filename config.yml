@@ -48,7 +48,7 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/front-left-sub
-          input-args:
+          input_args:
             - -rtsp_transport
             - tcp
             - -user_agent
@@ -56,11 +56,11 @@ cameras:
           roles:
             - detect
         - path: rtsp://127.0.0.1:8554/front-left
-          input-args:
+          input_args:
             - -rtsp_transport
             - tcp
             - -user_agent
-            - Frigate
+            - FFmpeg Frigate
           roles:
             - audio
             - record

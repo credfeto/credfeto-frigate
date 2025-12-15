@@ -16,7 +16,7 @@ audio:
 
 ffmpeg:
   input_args: preset-rtsp-generic
-#  hwaccel_args: preset-vaapi
+  hwaccel_args: preset-vaapi
 
 timestamp_style:
   position: "tl"

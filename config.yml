@@ -14,7 +14,8 @@ auth:
 audio:
   enabled: False
 
-#ffmpeg:
+ffmpeg:
+  input-args: preset-rtsp-generic
 #  hwaccel_args: preset-vaapi
 
 timestamp_style:
@@ -39,7 +40,7 @@ cameras:
         - cat
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_04_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_main
           roles:
             - audio
             - detect
@@ -71,7 +72,7 @@ cameras:
         - cat
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_05_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_05_main
           roles:
             - audio
             - detect
@@ -102,7 +103,7 @@ cameras:
         - cat
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_06_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_06_main
           roles:
             - audio
             - detect
@@ -333,7 +334,7 @@ cameras:
         - dog
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_01_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_01_main
           roles:
             - audio
             - detect
@@ -363,7 +364,7 @@ cameras:
         - dog
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_02_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_02_main
           roles:
             - audio
             - detect
@@ -393,7 +394,7 @@ cameras:
         - dog
     ffmpeg:
       inputs:
-        - path: rtsp://viewer:Viewer1234@192.168.202.47/Preview_03_main
+        - path: rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_03_main
           roles:
             - audio
             - detect

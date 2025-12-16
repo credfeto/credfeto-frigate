@@ -71,10 +71,11 @@ cameras:
       enabled: True
       use_snapshot: True
       objects:
-        - person
         - car
-        - dog
         - cat
+        - dog
+        - motorcycle
+        - person
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/front-left-sub
@@ -115,10 +116,11 @@ cameras:
       enabled: True
       use_snapshot: True
       objects:
-        - person
         - car
-        - dog
         - cat
+        - dog
+        - motorcycle
+        - person
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/front-center-sub
@@ -158,10 +160,11 @@ cameras:
       enabled: True
       use_snapshot: True
       objects:
-        - person
         - car
-        - dog
         - cat
+        - dog
+        - motorcycle
+        - person
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/front-right-sub
@@ -195,8 +198,11 @@ cameras:
       enabled: True
       use_snapshot: True
       objects:
-        - person
         - car
+        - cat
+        - dog
+        - motorcycle
+        - person
     type: "lpr"
     lpr:
       enabled: True

@@ -432,7 +432,17 @@ review:
       - dog
       - motorcycle
       - person
-
+  detections:
+    # Optional: enables detections for the camera (default: shown below)
+    enabled: True
+    # Optional: labels that qualify as a detection (default: all labels that are tracked / listened to)
+    labels:
+      - bicycle
+      - car
+      - motorcycle
+      - person
+      - cat
+      - dog
 motion:
   enabled: true
 

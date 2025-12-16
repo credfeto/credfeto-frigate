@@ -51,9 +51,9 @@ go2rtc:
       - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_05_sub
 
     front-right:
-      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_main#video=copy#audio=copy#audio=aac
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_06_main#video=copy#audio=copy#audio=aac
     front-right-sub:
-      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_04_sub
+      - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_06_sub
 
     front-car-xmeye:
       - ffmpeg:rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=0.sdp

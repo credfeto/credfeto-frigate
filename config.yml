@@ -396,28 +396,17 @@ objects:
     - bowl
     - car
     - cat
-    - cup
     - dog
-    - door
-    - eye glasses
-    - fork
-    - frisbee
     - handbag
-    - hat
     - knife
     - motorcycle
     - person
-    - plate
-    - potted plant
     - scissors
-    - shoe
-    - spoon
     - suitcase
     - teddy bear
     - tie
     - tv
     - umbrella
-    - vase
     - wine glass
 review:
   # Optional: alerts configuration

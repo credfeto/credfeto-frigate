@@ -55,11 +55,6 @@ go2rtc:
     front-right-sub:
       - ffmpeg:rtsp://viewer:Viewer1234@192.168.202.47/h265Preview_06_sub
 
-    front-car-xmeye:
-      - ffmpeg:rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=0.sdp
-    front-car-xmeye-sub:
-      - ffmpeg:rtsp://192.168.202.48/user=admin&password=Shadow12&channel=2&stream=1.sdp
-
 cameras:
   front-left:
     enabled: true
@@ -191,43 +186,6 @@ cameras:
       password: Viewer1234
     detect:
       enabled: true
-
-  xmeye_front_car:
-    enabled: true
-    genai:
-      enabled: True
-      use_snapshot: True
-      objects:
-        - car
-        - cat
-        - dog
-        - motorcycle
-        - person
-    type: "lpr"
-    lpr:
-      enabled: True
-    ffmpeg:
-      inputs:
-        - path: rtsp://127.0.0.1:8554/front-car-xmeye-sub
-          input_args:
-            - -rtsp_transport
-            - tcp
-            - -user_agent
-            - FFmpeg Frigate
-          roles:
-            - detect
-        - path: rtsp://127.0.0.1:8554/front-car-xmeye
-          input_args:
-            - -rtsp_transport
-            - tcp
-            - -user_agent
-            - FFmpeg Frigate
-          roles:
-            - record
-    detect:
-      enabled: true
-      width: 1900
-      height: 1080
 
   garden_left:
     enabled: true
@@ -363,7 +321,7 @@ camera_groups:
     icon: LuCar
     cameras:
       - front-left
-      - xmeye_front_car
+      - front-center
       - front-right
   Garden:
     order: 2
@@ -372,14 +330,6 @@ camera_groups:
       - garden_left
       - garden_center
       - garden_right
-
-  Test:
-    order: 3
-    icon: LuCctv
-    cameras:
-#      - xmeye_front_left
-      - front-center
-#      - xmeye_front_right
 
 detect:
   enabled: true

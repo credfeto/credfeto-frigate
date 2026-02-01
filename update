@@ -1,5 +1,12 @@
 #! /bin/sh
 
+die() {
+    echo
+    echo "$@"
+    exit 1
+}
+
+
 BASEDIR="$(dirname "$(readlink -f "$0")")"
 
 git pull
